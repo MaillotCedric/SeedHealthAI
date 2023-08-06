@@ -1,0 +1,10 @@
+services:
+    back:
+        build: ./Back-end
+        ports: 
+            - 8000:8000
+
+    front:
+        build: ./Front-end
+        ports: 
+            - 5173:80

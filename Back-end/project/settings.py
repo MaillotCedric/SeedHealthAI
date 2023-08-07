@@ -39,9 +39,9 @@ SECRET_KEY = str(os.getenv("SECRET_KEY"))
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # FIXME - don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -74,12 +74,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-# CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_ALLOW_ALL = True
-# CORS_ORIGIN_WHITELIST = (
-#     "http://localhost:8080",
-#     "http://localhost:5173",
-# )
+CORS_ORIGIN_ALLOW_ALL = False
+# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = (
+    "http://localhost:8080",
+    "http://localhost:5173",
+)
 
 ROOT_URLCONF = 'project.urls'
 
